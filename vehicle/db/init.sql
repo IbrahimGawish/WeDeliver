@@ -11,7 +11,9 @@ CREATE TABLE IF NOT EXISTS vehicles_data (
 );
 
 -- Insert some initial data
-INSERT INTO vehicles_data (vehicle_type, vehicle_status, rent_price)
+INSERT INTO vehicles_data (vehicle_type, vehicle_status, rent_price,onboard_date)
 VALUES
-('Car', 'Active', 10),
-('Motorcycle', 'Active', 5);
+('Car', 'Leased', 10,'2023-12-28 12:00:00'),
+('Motorcycle', 'Leased', 5,'2023-12-20 12:00:00'),
+('Motorcycle', 'Active', 5,'2022-12-28 12:00:00'),
+('Car', 'Leased', 12,'2023-11-28 12:00:00');

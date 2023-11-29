@@ -1,6 +1,6 @@
 import unittest
 from flask import Flask
-from app import invoices_data
+from app import *
 
 class InvoiceAppTestCase(unittest.TestCase):
 
@@ -30,4 +30,5 @@ class InvoiceAppTestCase(unittest.TestCase):
             self.assertEqual(response.get_data(as_text=True), "Hello, Welcome to Invoice Service")
 
 if __name__ == '__main__':
+    print(ox)
     unittest.main()

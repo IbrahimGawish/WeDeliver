@@ -1,3 +1,6 @@
 Flask
 mysql-connector
 setuptools
+apscheduler
+requests
+pytest

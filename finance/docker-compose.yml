@@ -9,6 +9,8 @@ services:
       - "5008:5000"
     depends_on:
       - db
+    environment:
+      PYTHONUNBUFFERED: 1
 
   db:
     image: library/mysql:8.0

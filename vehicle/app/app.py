@@ -15,10 +15,14 @@ config = {
 def vehicles_data():
     connection = mysql.connector.connect(**config)
     cursor = connection.cursor(dictionary=True)
-    cursor.execute('SELECT vehicle_type, vehicle_status, rent_price, onboard_date '
+    cursor.execute('SELECT id, vehicle_type, vehicle_status, rent_price, onboard_date '
                    ' FROM vehicles_data')
     results = cursor.fetchall()
     cursor.close()
+    #cursor = connection.cursor()
+    #cursor.execute("update vehicles_data set onboard_date ='2023-12-28 12:00:00' where vehicle_type='Car'; ")
+    #cursor.execute("update vehicles_data set onboard_date ='2023-12-20 12:00:00' where vehicle_type='Motorcycle'; ")
+    #connection.commit()
     connection.close()
     return results
 
